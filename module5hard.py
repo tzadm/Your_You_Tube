@@ -116,18 +116,24 @@ class UrTube:
                 print('Войдите в аккаунт, чтобы смотреть видео')
             elif adult_mode_use:
                 print('Вам нет 18 лет, пожалуйста покиньте страницу')
-
-            elif time_now_use == 0:
-                for i in range(duration_use):
-                    time.sleep(1)
-                    print(1 + i, end=' ', )
-                print('Конец фильма')
             else:
-                duration_use = time_now_use
                 for i in range(duration_use):
                     time.sleep(1)
+                    time_now_use += 1
                     print(1 + i, end=' ', )
                 print('Конец фильма')
+
+            # elif time_now_use == 0:
+            #     for i in range(duration_use):
+            #         time.sleep(1)
+            #         print(1 + i, end=' ', )
+            #     print('Конец фильма')
+            # else:
+            #     duration_use = time_now_use
+            #     for i in range(duration_use):
+            #         time.sleep(1)
+            #         print(1 + i, end=' ', )
+            #     print('Конец фильма')
 
 
 ur = UrTube()
